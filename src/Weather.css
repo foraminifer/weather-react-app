@@ -1,0 +1,33 @@
+.Weather bold {
+  font-weight: bold;
+  font-size: 1.6em;
+  color: white;
+}
+.Weather h1 {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.Weather .today {
+  font-size: 1.4em;
+  padding-block: 2%;
+  color: white;
+}
+.temp {
+  color: white;
+  font-size: 20px;
+}
+.Weather .todays-icon {
+  margin-inline: -1em;
+  margin-top: -2em;
+  width: 100px;
+}
+
+@media (max-width: 550px) {
+  .Weather .split-weather,
+  .card {
+    flex-direction: column;
+  }
+  .Weather {
+    text-align: center;
+  }
+}

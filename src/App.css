@@ -1,38 +1,104 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  margin-top: 20px auto;
+  background-color: rgb(232, 253, 251);
+}
+.container {
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/022/369/original/29Z_2105.w026.n002.422B.p1.422.jpg?1639024601);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid;
+  width: 53%;
+  background-position: 50% 50%;
+  padding-bottom: 25px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.pageSetup {
+  max-width: 700px;
+  display: block;
+}
+.card {
+  background-color: rgba(25, 190, 10, 0.726);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+  width: 230px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  display: block;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  color: white;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.input {
+  border-radius: 10px;
+  display: inline;
+  font-size: 25px;
+  padding: 5px;
+}
+.button {
+  display: inline;
+  background: rgba(241, 226, 86, 0.925);
+  color: rgb(78, 78, 78);
+  border: none;
+  border-radius: 10px;
+  font-size: 22px;
+  padding: 10px;
+  transition: 200 ms ease-in-out;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+}
+.button:hover {
+  background: rgb(35, 144, 187);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+li {
+  list-style: none;
+  padding: 5px;
+}
+.variables {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bolder;
+  color: white;
+}
+.forecast,
+.weather-forecast-date,
+.weather-forecast-temperatures {
+  text-align: center;
+  font-size: 20px;
+  padding-right: -40px;
+  color: white;
+}
+.weather-forecast-temperature-max,
+.weather-forecast-temperature-min {
+  font-size: 15px;
+  display: 0;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer {
+  text-align: center;
+  display: block;
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    text-align: center;
+    font-size: 50px;
   }
-  to {
-    transform: rotate(360deg);
+  .Weather .todays-icon {
+    width: 60px;
+    padding-top: 15px;
+    padding-right: 10px;
   }
 }
