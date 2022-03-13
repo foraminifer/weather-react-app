@@ -13,7 +13,7 @@ export default function Search() {
           />
           <input type="submit" value="Search" class="button" />
           <button type="button" id="currentLocation" class="button">
-            <i class="fas fa-map-marker-alt"></i>
+            <i className="fas fa-location-arrow location-icon"></i>
           </button>
         </div>
       </form>

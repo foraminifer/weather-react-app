@@ -1,13 +1,13 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  padding-top: 15px;
 }
 
 body {
   height: 100%;
   width: 100%;
   background-position: center;
-  margin-top: 20px auto;
   background-color: rgb(232, 253, 251);
 }
 .container {
@@ -15,11 +15,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid;
-  width: 53%;
+  width: 38%;
   background-position: 50% 50%;
   padding-bottom: 25px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 10px;
+  margin: 0 auto;
 }
 .pageSetup {
   max-width: 700px;
@@ -32,13 +33,6 @@ body {
   margin: 0 auto;
 }
 
-h1 {
-  display: block;
-  padding: 10px;
-  font-size: 12px;
-  text-align: center;
-  color: white;
-}
 .input {
   border-radius: 10px;
   display: inline;
@@ -72,33 +66,15 @@ li {
   font-weight: bolder;
   color: white;
 }
-.forecast,
-.weather-forecast-date,
-.weather-forecast-temperatures {
-  text-align: center;
-  font-size: 20px;
-  padding-right: -40px;
-  color: white;
-}
-.weather-forecast-temperature-max,
-.weather-forecast-temperature-min {
-  font-size: 15px;
-  display: 0;
-  margin: 0;
-}
-
 .footer {
+  padding-top: 10px;
   text-align: center;
-  display: block;
+  color: rgb(78, 78, 78);
 }
-@media screen and (max-width: 600px) {
-  h1 {
-    text-align: center;
-    font-size: 50px;
-  }
-  .Weather .todays-icon {
-    width: 60px;
-    padding-top: 15px;
-    padding-right: 10px;
-  }
+a {
+  text-decoration: none;
+  color: blue;
+}
+a:hover {
+  color: rgba(25, 190, 10, 0.726);
 }

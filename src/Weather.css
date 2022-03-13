@@ -3,22 +3,26 @@
   font-size: 1.6em;
   color: white;
 }
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
 .Weather h1 {
   font-size: 1.6em;
   font-weight: bold;
+  padding: 8px;
 }
 .Weather .today {
   font-size: 1.4em;
-  padding-block: 2%;
   color: white;
 }
-.temp {
+.Weather .temp {
   color: white;
   font-size: 20px;
 }
 .Weather .todays-icon {
   margin-inline: -1em;
-  margin-top: -2em;
+  margin-top: 10px;
   width: 100px;
 }
 
