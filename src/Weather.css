@@ -10,28 +10,68 @@
 .Weather h1 {
   font-size: 1.6em;
   font-weight: bold;
-  padding: 8px;
+}
+.d-flex {
+  display: flex !important;
 }
 .Weather .today {
   font-size: 1.4em;
   color: white;
 }
+.Weather .date,
+.time {
+  font-size: 15px;
+  padding-top: 15px;
+  padding-bottom: 18px;
+}
 .Weather .temp {
   color: white;
-  font-size: 20px;
+  font-size: 27px;
+  margin-top: 18px;
 }
 .Weather .todays-icon {
-  margin-inline: -1em;
-  margin-top: 10px;
-  width: 100px;
+  margin-top: -12px;
 }
 
 @media (max-width: 550px) {
-  .Weather .split-weather,
-  .card {
-    flex-direction: column;
-  }
   .Weather {
     text-align: center;
+  }
+  .Weather h1 {
+    font-size: 20px;
+  }
+  .Weather .split-weather {
+    flex-direction: column;
+  }
+  .Weather .todays-icon {
+    margin-left: 85px;
+    margin-top: -5px;
+    width: 55px;
+    height: 55px;
+  }
+  .Weather .temp {
+    font-size: 18px;
+    margin-top: 7px;
+  }
+}
+@media (max-width: 912px) {
+  .Weather {
+    text-align: center;
+  }
+  .Weather h1 {
+    font-size: 20px;
+  }
+  .Weather .split-weather {
+    flex-direction: column;
+  }
+  .Weather .todays-icon {
+    margin-left: 85px;
+    margin-top: -5px;
+    width: 55px;
+    height: 55px;
+  }
+  .Weather .temp {
+    font-size: 18px;
+    margin-top: 7px;
   }
 }

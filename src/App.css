@@ -15,28 +15,24 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid;
-  width: 38%;
+  width: 35%;
   background-position: 50% 50%;
   padding-bottom: 25px;
   border-radius: 10px;
   margin-top: 10px;
   margin: 0 auto;
 }
-.pageSetup {
-  max-width: 700px;
-  display: block;
-}
 .card {
   background-color: rgba(25, 190, 10, 0.726);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
-  width: 230px;
+  width: 200px;
   margin: 0 auto;
 }
 
 .input {
   border-radius: 10px;
   display: inline;
-  font-size: 25px;
+  font-size: 22px;
   padding: 5px;
 }
 .button {
@@ -45,7 +41,7 @@ body {
   color: rgb(78, 78, 78);
   border: none;
   border-radius: 10px;
-  font-size: 22px;
+  font-size: 16px;
   padding: 10px;
   transition: 200 ms ease-in-out;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
@@ -60,11 +56,12 @@ li {
   padding: 5px;
 }
 .variables {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-family: "Quicksand", sans-serif;
   font-weight: bolder;
   color: white;
+  padding-right: 28px;
 }
 .footer {
   padding-top: 10px;
@@ -77,4 +74,27 @@ a {
 }
 a:hover {
   color: rgba(25, 190, 10, 0.726);
+}
+@media (max-width: 740px) {
+  .container {
+    width: 70%;
+  }
+  .input {
+    display: block;
+    margin: 0 auto;
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+  .button {
+    font-size: 12px;
+  }
+  .card {
+    width: 150px;
+  }
+  .variables {
+    font-size: 12px;
+  }
+  .footer {
+    font-size: 12px;
+  }
 }
