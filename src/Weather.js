@@ -1,56 +1,78 @@
-import React from "react";
+import React, { useState } from "react";
 import Search from "./Search";
+import axios from "axios";
 import "./App.css";
 import "./Weather.css";
 
-export default function Weather() {
-  return (
-    <div className="Weather">
-      <div className="pageSetup">
-        <div className="today">
-          <div className="date">
-            Saturday, February 19th 2022
-            <span className="time"> 12:14</span>
-          </div>
-          <Search />
-          <h1 className="current-city">Lombard, IL</h1>
-        </div>
-        <div className="row split-weather">
-          <div className="col">
-            <div className="d-flex">
-              <img
-                className="todays-icon"
-                src="https://openweathermap.org/img/wn/01d@2x.png"
-                alt="weather-icon"
-              />
-              <span className="temp">
-                <bold>10</bold> °C
-              </span>
+export default function Weather(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  function handleResponse(response) {
+    console.log(response.data);
+    setWeatherData({
+      ready: true,
+      date: "Thursday, March 17th",
+      temperature: Math.round(response.data.main.temp),
+      humidity: response.data.main.humidity,
+      wind: Math.round(response.data.wind.speed),
+      city: response.data.name,
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      description: response.data.weather[0].description,
+    });
+  }
+  if (weatherData.ready) {
+    return (
+      <div className="Weather">
+        <div className="pageSetup">
+          <div className="today">
+            <div className="date">
+              {weatherData.date}
+              <span className="time"> 12:14</span>
             </div>
+            <Search />
+            <h1 className="current-city">{weatherData.city}</h1>
           </div>
-          <div className="col split-weather">
-            <div className="card">
-              <div className="card-body">
-                <div className="variables">
-                  <ul>
-                    <li>
-                      <span id="description">Sunny</span>
-                    </li>
-                    <li>
-                      Humidity: <span id="humidity">10</span>%
-                    </li>
-                    <li>
-                      Wind: <span id="wind">15</span> mph
-                    </li>
-                  </ul>
+          <div className="row split-weather">
+            <div className="col">
+              <div className="d-flex">
+                <img
+                  className="todays-icon"
+                  src={weatherData.iconUrl}
+                  alt="weather-icon"
+                />
+                <span className="temp">
+                  <bold>{weatherData.temperature}</bold> °C
+                </span>
+              </div>
+            </div>
+            <div className="col split-weather">
+              <div className="card">
+                <div className="card-body">
+                  <div className="variables">
+                    <ul>
+                      <li>
+                        <span id="description">{weatherData.description}</span>
+                      </li>
+                      <li>
+                        Humidity:{" "}
+                        <span id="humidity">{weatherData.humidity}</span>%
+                      </li>
+                      <li>
+                        Wind: <span id="wind">{weatherData.wind}</span> mph
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <br />
-      <div class="row" className="forecast" id="forecast"></div>
-    </div>
-  );
+    );
+  } else {
+    let apiKey = "4d2a567c086d07d567943ed0f435616c";
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+
+    return "Loading...";
+  }
 }

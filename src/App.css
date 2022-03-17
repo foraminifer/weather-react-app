@@ -62,6 +62,7 @@ li {
   font-weight: bolder;
   color: white;
   padding-right: 28px;
+  text-transform: capitalize;
 }
 .footer {
   padding-top: 10px;
