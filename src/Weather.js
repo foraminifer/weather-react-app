@@ -3,6 +3,7 @@ import Search from "./Search";
 import axios from "axios";
 import "./App.css";
 import "./Weather.css";
+import FormatDate from "./FormatDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -10,7 +11,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
-      date: "Thursday, March 17th",
+      date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
@@ -25,8 +26,7 @@ export default function Weather(props) {
         <div className="pageSetup">
           <div className="today">
             <div className="date">
-              {weatherData.date}
-              <span className="time"> 12:14</span>
+              <FormatDate date={weatherData.date} />
             </div>
             <Search />
             <h1 className="current-city">{weatherData.city}</h1>
