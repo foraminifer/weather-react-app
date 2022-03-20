@@ -23,7 +23,7 @@ body {
   margin: 0 auto;
 }
 .card {
-  background-color: rgba(25, 190, 10, 0.726);
+  background-color: rgba(117, 194, 110, 0.726);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
   width: 200px;
   margin: 0 auto;
@@ -35,7 +35,7 @@ body {
   font-size: 22px;
   padding: 5px;
 }
-.button {
+.Search .button {
   display: inline;
   background: rgba(241, 226, 86, 0.925);
   color: rgb(78, 78, 78);
@@ -70,11 +70,8 @@ li {
   color: rgb(78, 78, 78);
 }
 a {
-  text-decoration: none;
   color: blue;
-}
-a:hover {
-  color: rgba(25, 190, 10, 0.726);
+  text-decoration: none;
 }
 @media (max-width: 740px) {
   .container {
@@ -97,5 +94,8 @@ a:hover {
   }
   .footer {
     font-size: 12px;
+  }
+  .footer a {
+    color: blue !important;
   }
 }

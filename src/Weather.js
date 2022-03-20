@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 import "./Weather.css";
 import FormatDate from "./FormatDate";
+import TempConversion from "./TempConversion";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -72,7 +73,7 @@ export default function Weather(props) {
                   alt="weather-icon"
                 />
                 <span className="temp">
-                  <bold>{weatherData.temperature}</bold> °C
+                  <TempConversion temp={weatherData.temperature} />
                 </span>
               </div>
             </div>
