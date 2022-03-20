@@ -37,7 +37,7 @@ body {
 }
 .Search .button {
   display: inline;
-  background: rgb(215, 218, 76);
+  background: rgb(216, 218, 121);
   color: rgb(78, 78, 78);
   border: none;
   border-radius: 10px;
@@ -68,9 +68,10 @@ li {
   padding-top: 10px;
   text-align: center;
   color: rgb(78, 78, 78);
+  font-size: 14px;
 }
 a {
-  color: rgb(201, 204, 15);
+  color: rgb(218, 208, 68);
   text-decoration: none;
 }
 @media (max-width: 740px) {
@@ -94,8 +95,5 @@ a {
   }
   .footer {
     font-size: 12px;
-  }
-  .footer a {
-    color: blue !important;
   }
 }
