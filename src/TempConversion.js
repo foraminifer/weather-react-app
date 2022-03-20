@@ -18,10 +18,7 @@ export default function TempConversion(props) {
       <span>
         {props.temp}{" "}
         <small>
-          <a href="/" onClick={setCel} rel="noopener noreferrer">
-            °C
-          </a>{" "}
-          |
+          °C |
           <a href="/" onClick={setFah} rel="noopener noreferrer">
             °F
           </a>
@@ -36,10 +33,7 @@ export default function TempConversion(props) {
           <a href="/" onClick={setCel} rel="noopener noreferrer">
             °C
           </a>{" "}
-          |
-          <a href="/" onClick={setFah} rel="noopener noreferrer">
-            °F
-          </a>
+          | °F
         </small>
       </span>
     );
