@@ -28,7 +28,7 @@ export default function TempConversion(props) {
   } else {
     return (
       <span>
-        {Math.round(props.temp * 1 + 32)}{" "}
+        {Math.round((props.temp * 9) / 5 + 32)}{" "}
         <small>
           <a href="/" onClick={setCel} rel="noopener noreferrer">
             °C
