@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Search from "./Search";
 import axios from "axios";
 import "./App.css";
 import "./Weather.css";
@@ -7,6 +6,7 @@ import FormatDate from "./FormatDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -16,10 +16,26 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
       city: response.data.name,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
     });
   }
+
+  function search() {
+    let apiKey = "4d2a567c086d07d567943ed0f435616c";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -28,7 +44,23 @@ export default function Weather(props) {
             <div className="date">
               <FormatDate date={weatherData.date} />
             </div>
-            <Search />
+            <div className="Search">
+              <form onSubmit={handleSubmit}>
+                <div className="search" id="search-form">
+                  <input
+                    type="text"
+                    id="city-input"
+                    class="input"
+                    placeholder="Enter a City"
+                    onChange={handleCityChange}
+                  />
+                  <input type="submit" value="Search" class="button" />
+                  <button type="button" id="currentLocation" class="button">
+                    <i className="fas fa-location-arrow location-icon"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
             <h1 className="current-city">{weatherData.city}</h1>
           </div>
           <div className="row split-weather">
@@ -69,10 +101,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    let apiKey = "4d2a567c086d07d567943ed0f435616c";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return "Loading...";
   }
 }
