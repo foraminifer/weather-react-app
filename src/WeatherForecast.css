@@ -1,0 +1,43 @@
+.WeatherForecast .row {
+  align-items: center;
+}
+.WeatherForecast {
+  font-size: 16px;
+  text-align: left;
+  font-weight: 600;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  color: white;
+}
+.WeatherForecast .col {
+  letter-spacing: 0.8px;
+}
+
+.WeatherForecast .weather-icon {
+  max-width: 50px;
+}
+
+.min-temp {
+  opacity: 0.5;
+}
+.WeatherForecast .col {
+  padding: 1%;
+}
+
+@media (max-width: 460px) {
+  .WeekdayForecast {
+    font-size: 0.8em;
+    padding-inline: 2%;
+  }
+  .WeatherForecast .weather-icon {
+    max-width: 70px;
+  }
+
+  .min-temp,
+  .max-temp,
+  .forecast-day {
+    font-size: 12px;
+  }
+}

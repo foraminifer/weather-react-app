@@ -4,6 +4,7 @@ import "./App.css";
 import "./Weather.css";
 import FormatDate from "./FormatDate";
 import TempConversion from "./TempConversion";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -12,6 +13,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
@@ -86,11 +88,12 @@ export default function Weather(props) {
                         <span id="description">{weatherData.description}</span>
                       </li>
                       <li>
-                        Humidity:{" "}
+                        <i className="fas fa-tint"></i> Humidity:{" "}
                         <span id="humidity">{weatherData.humidity}</span>%
                       </li>
                       <li>
-                        Wind: <span id="wind">{weatherData.wind}</span> mph
+                        <i className="fas fa-wind"></i> Wind:{" "}
+                        <span id="wind">{weatherData.wind}</span> mph
                       </li>
                     </ul>
                   </div>
@@ -98,6 +101,7 @@ export default function Weather(props) {
               </div>
             </div>
           </div>
+          <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
       </div>
     );

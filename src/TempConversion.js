@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Weather.css";
 
 export default function TempConversion(props) {
   let [degree, setDegree] = useState(true);
@@ -15,7 +16,7 @@ export default function TempConversion(props) {
 
   if (degree) {
     return (
-      <span>
+      <span className="main-temp">
         {props.temp}{" "}
         <small>
           °C |
