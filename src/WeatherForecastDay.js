@@ -19,7 +19,7 @@ export default function WeatherForecastDay(props) {
       "Sunday",
       "Monday",
       "Tuesday",
-      "Wedsnesday",
+      "Weds",
       "Thursday",
       "Friday",
       "Saturday",

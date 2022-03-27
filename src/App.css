@@ -17,10 +17,10 @@ body {
   border: 1px solid;
   width: 35%;
   background-position: 50% 50%;
-  padding-bottom: 25px;
   border-radius: 10px;
   margin-top: 10px;
   margin: 0 auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
 }
 .card {
   background-color: rgba(117, 194, 110, 0.726);
@@ -35,6 +35,7 @@ body {
   display: inline;
   font-size: 22px;
   padding: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
 }
 .Search .button {
   display: inline;
