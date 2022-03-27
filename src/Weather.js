@@ -91,15 +91,17 @@ export default function Weather(props) {
           </div>
           <div className="row split-weather">
             <div className="col">
-              <div className="d-flex">
-                <img
-                  className="todays-icon"
-                  src={weatherData.iconUrl}
-                  alt="weather-icon"
-                />
-                <span className="temp">
-                  <TempConversion temp={weatherData.temperature} />
-                </span>
+              <div className="today-container">
+                <div className="d-flex">
+                  <img
+                    className="todays-icon"
+                    src={weatherData.iconUrl}
+                    alt="weather-icon"
+                  />
+                  <span className="temp">
+                    <TempConversion temp={weatherData.temperature} />
+                  </span>
+                </div>
               </div>
             </div>
             <div className="col split-weather">

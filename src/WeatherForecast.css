@@ -1,9 +1,10 @@
 .forecast-container {
-  border: 1px solid white;
   margin: 10%;
   border-radius: 10px;
   margin-top: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+  background-color: rgb(235, 181, 112);
+  opacity: 0.9;
 }
 
 .WeatherForecast .row {
@@ -16,7 +17,7 @@
   width: 100%;
   align-items: center;
   align-content: center;
-  color: white;
+  color: rgb(49, 46, 46);
   font-family: "Didact Gothic", sans-serif;
 }
 .WeatherForecast .col {

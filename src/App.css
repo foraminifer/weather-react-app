@@ -7,12 +7,15 @@ body {
   height: 100%;
   width: 100%;
   background-position: center;
-  background-color: rgb(232, 253, 251);
+  background-color: rgb(242, 233, 216);
 }
 .container {
-  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/022/369/original/29Z_2105.w026.n002.422B.p1.422.jpg?1639024601);
+  background-image: url("leaves.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  object-fit: contain;
+  width: 300px;
+  height: auto;
   border: 1px solid;
   width: 35%;
   background-position: 50% 50%;
@@ -22,11 +25,12 @@ body {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
 }
 .card {
-  background-color: rgba(117, 194, 110, 0.726);
+  background-color: rgb(245, 239, 229);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
   width: 200px;
   margin: 0 auto;
   border-radius: 10px;
+  opacity: 0.9;
 }
 
 .input {
@@ -38,8 +42,8 @@ body {
 }
 .Search .button {
   display: inline;
-  background: rgb(216, 218, 121);
-  color: rgb(78, 78, 78);
+  background: rgb(145, 129, 163);
+  color: rgb(250, 243, 243);
   border: none;
   border-radius: 10px;
   font-size: 16px;
@@ -48,7 +52,7 @@ body {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
 }
 .button:hover {
-  background: rgb(14, 113, 166);
+  background: rgb(94, 89, 139);
   color: white;
 }
 
@@ -59,7 +63,7 @@ li {
 .variables {
   font-size: 14px;
   font-weight: bolder;
-  color: rgb(247, 244, 244);
+  color: rgb(49, 46, 46);
   padding-right: 28px;
   text-transform: capitalize;
   font-family: "Livvic", sans-serif;
@@ -72,7 +76,7 @@ li {
   font-family: "Livvic", sans-serif;
 }
 a {
-  color: rgb(202, 191, 29);
+  color: rgb(212, 67, 44);
   text-decoration: none;
 }
 a:hover {
