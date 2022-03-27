@@ -50,9 +50,10 @@ body {
   padding: 10px;
   transition: 200 ms ease-in-out;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+  opacity: 0.9;
 }
 .button:hover {
-  background: rgb(94, 89, 139);
+  background: rgb(216, 63, 43);
   color: white;
 }
 
@@ -76,11 +77,11 @@ li {
   font-family: "Livvic", sans-serif;
 }
 a {
-  color: rgb(212, 67, 44);
+  color: rgb(216, 63, 43);
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline rgb(2, 2, 68);
+  text-decoration: underline rgb(81, 145, 65);
 }
 @media (max-width: 740px) {
   .container {
