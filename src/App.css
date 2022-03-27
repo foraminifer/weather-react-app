@@ -1,5 +1,4 @@
 .App {
-  font-family: sans-serif;
   text-align: center;
   padding-top: 15px;
 }
@@ -49,7 +48,7 @@ body {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
 }
 .button:hover {
-  background: rgb(35, 144, 187);
+  background: rgb(14, 113, 166);
   color: white;
 }
 
@@ -63,16 +62,21 @@ li {
   color: rgb(247, 244, 244);
   padding-right: 28px;
   text-transform: capitalize;
+  font-family: "Livvic", sans-serif;
 }
 .footer {
   padding-top: 10px;
   text-align: center;
   color: rgb(78, 78, 78);
   font-size: 14px;
+  font-family: "Livvic", sans-serif;
 }
 a {
-  color: rgb(218, 208, 68);
+  color: rgb(202, 191, 29);
   text-decoration: none;
+}
+a:hover {
+  text-decoration: underline rgb(2, 2, 68);
 }
 @media (max-width: 740px) {
   .container {

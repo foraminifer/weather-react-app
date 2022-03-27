@@ -10,14 +10,14 @@
   align-items: center;
 }
 .WeatherForecast {
-  font-size: 16px;
+  font-size: 18px;
   text-align: left;
   font-weight: 600;
   width: 100%;
   align-items: center;
-  justify-content: center;
   align-content: center;
   color: white;
+  font-family: "Didact Gothic", sans-serif;
 }
 .WeatherForecast .col {
   letter-spacing: 0.8px;
@@ -25,6 +25,7 @@
 
 .WeatherForecast .weather-icon {
   max-width: 50px;
+  align-items: center;
 }
 
 .min-temp {

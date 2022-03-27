@@ -9,6 +9,7 @@ import WeatherForecast from "./WeatherForecast";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -38,6 +39,18 @@ export default function Weather(props) {
   function handleCityChange(event) {
     setCity(event.target.value);
   }
+  function showPosition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiKey = "4d2a567c086d07d567943ed0f435616c";
+    let apiurl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiurl).then(handleResponse);
+  }
+
+  function getCurrentPosition(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
 
   if (weatherData.ready) {
     return (
@@ -57,8 +70,18 @@ export default function Weather(props) {
                     placeholder="Enter a City"
                     onChange={handleCityChange}
                   />
-                  <input type="submit" value="Search" class="button" />
-                  <button type="button" id="currentLocation" class="button">
+                  <input
+                    type="submit"
+                    value="Search"
+                    class="button"
+                    onClick={handleSubmit}
+                  />
+                  <button
+                    type="button"
+                    id="currentLocation"
+                    class="button"
+                    onClick={getCurrentPosition}
+                  >
                     <i className="fas fa-location-arrow location-icon"></i>
                   </button>
                 </div>
